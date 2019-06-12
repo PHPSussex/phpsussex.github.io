@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body, button, input, select, textarea {
+    font-family: "Raleway","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#logo {
+    display: block;
+    height: 150px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Roboto","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.hero.is-primary {
+    background: #363636;
+}
+
+.hero.is-primary .hero-body {
+    padding: 3rem 0;
+}
+
+.hero.is-info .hero-body {
+    padding: 7rem 0;
+}
+
+.hero.is-info .container {
+    text-align: center;
+}
+
+section.social {
+    background: #7FD4C4;
+}
+
+section.sponsors {
+    margin-bottom: 6rem;
+}
+
+section.social .container,
+section.sponsors .container {
+    max-width: 960px;
+}
+
+section.social .title,
+section.sponsors .title {
+    margin-bottom: 3rem;
+}
+
+section.social .button {
+    min-width: 200px;
+}
+
+section.sponsors a {
+    display: block;
+}
+
+section.sponsors img {
+    display: block;
+    height: 75px;
+}
+
+.footer {
+    background: #363636;
+    color: #eee;
+    padding: 0.5rem;
+}
