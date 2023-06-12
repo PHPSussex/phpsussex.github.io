@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+    font-family: "Roboto","Droid Sans","Helvetica Neue","Helvetica","Arial","sans-serif";
+    background: linear-gradient(to right, #5A99C6, #295368);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    height: 150px;
+    margin: 0 auto;
+}
+
+a {
+    color: #ffffff;
+}
+
+section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+h1, h2, p {
+    padding: 15px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+section > p {
+    font-size: 1.2rem;
+    line-height: 34px;
+}
+
+footer > p {
+    font-size: 0.9rem;
+}
+
+ul.social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.social > li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+i {
+    font-size: 1.5rem;
+}
