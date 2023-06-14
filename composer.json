@@ -1,0 +1,17 @@
+{
+    "name": "phpsussex/phpsussex.github.io",
+    "description": "PHP Sussex website",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "osteel",
+            "email": "yannick@yellowraincoat.co.uk"
+        }
+    ],
+    "require": {
+        "symfony/browser-kit": "^6.3",
+        "symfony/http-client": "^6.3",
+        "symfony/css-selector": "^6.3"
+    }
+}

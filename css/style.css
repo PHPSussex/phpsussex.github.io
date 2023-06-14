@@ -9,42 +9,33 @@ body {
     text-align: center;
 }
 
-#logo {
-    display: block;
-    height: 150px;
-    margin: 0 auto;
-}
-
-a {
-    color: #ffffff;
-}
-
 section {
     max-width: 900px;
-    margin: 0 auto;
-    padding: 1rem 0;
+    margin: 2.5rem auto;
 }
 
 h1, h2, p {
-    padding: 15px;
-    margin: 0;
+    margin: 0 0 2rem;
+    padding: 0 10px;
 }
 
 h1 {
     font-size: 2rem;
+    color: #C1EDF6;
 }
 
 h2 {
     font-size: 1.6rem;
 }
 
-section > p {
-    font-size: 1.2rem;
-    line-height: 34px;
+a {
+    color: #ffffff;
 }
 
-footer > p {
-    font-size: 0.9rem;
+#logo {
+    display: block;
+    height: 150px;
+    margin: 0 auto;
 }
 
 ul.social {
@@ -60,4 +51,64 @@ ul.social > li {
 
 i {
     font-size: 1.5rem;
+}
+
+section > p {
+    font-size: 1.2rem;
+    line-height: 34px;
+}
+
+a.event {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    text-decoration: none;
+    text-align: left;
+    border: 2px solid #67A6D6;
+    margin: 15px auto 2rem;
+}
+
+a.event > img {
+    max-width: 400px;
+}
+
+a.event > div {
+    padding: 20px;
+    margin: 0;
+}
+
+a.event p {
+    padding: 0;
+}
+
+p.title {
+    font-size: 1.5rem;
+    margin: 0 0 30px;
+}
+
+p.date, p.venue {
+    font-style: italic;
+    color: #C1EDF6;
+    margin: 0 0 10px;
+}
+
+p.date::before {
+    font-style: normal;
+    content: "🗓️ ";
+}
+
+p.venue::before {
+    font-style: normal;
+    content: "📍 ";
+}
+
+footer > p {
+    font-size: 0.9rem;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+#sb-logo {
+    max-width: 85px;
+    margin-left: 10px;
 }
