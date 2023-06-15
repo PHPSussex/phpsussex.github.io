@@ -2,6 +2,9 @@
 
 ## Usage
 
+> **Note**
+> Requires PHP 8.1+
+
 Clone the repository:
 
 ```
