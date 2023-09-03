@@ -44,8 +44,7 @@ final class Event
     {
         $dom = (new HttpBrowser(HttpClient::create()))
             ->request('GET', $url)
-            ->filter('ul.eventList-list > li')
-            ->first();
+            ->filter('div#e-1');
 
         return $dom->count() === 0 ? null : new self($dom);
     }
@@ -58,38 +57,33 @@ final class Event
             return 'Date to be confirmed';
         }
 
-        return (new DateTime())
-            ->setTimezone(new DateTimeZone('Europe/London'))
-            ->setTimestamp((int) $node->attr('datetime') / 1000)
-            ->format('l j F Y, g:i a T');
+        return $node->text();
     }
 
     public function image(): string
     {
-        $node = $this->dom->filter('span.eventCardHead--photo');
+        $node = $this->dom->filter('img#image-e-1');
 
         if ($node->count() === 0) {
             return '/img/banner.png';
         }
 
-        return preg_match('#url\((.+)\)#', $node->attr('style'), $matches) === 1
-            ? $matches[1]
-            : '/img/banner.png';
+        return $node->attr('src');
     }
 
     public function title(): string
     {
-        return $this->dom->filter('a.eventCardHead--title')->text();
+        return $this->dom->filter('span.ds-font-title-3')->first()->text();
     }
 
     public function url(): string
     {
-        return $this->dom->filter('a.eventCardHead--title')->link()->getUri();
+        return $this->dom->filter('a#event-card-e-1')->link()->getUri();
     }
 
     public function venue(): string
     {
-        $node = $this->dom->filter('address > p');
+        $node = $this->dom->filter('span.text-gray6')->first();
 
         return $node->count() === 0
             ? 'Venue to be confirmed'
