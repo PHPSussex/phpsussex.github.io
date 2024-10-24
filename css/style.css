@@ -38,6 +38,10 @@ a {
     margin: 0 auto;
 }
 
+#meetup {
+    max-width: 800px;
+}
+
 ul.social {
     list-style: none;
     padding: 0;
@@ -62,7 +66,6 @@ a.event {
     max-width: 800px;
     text-decoration: none;
     text-align: left;
-    border: 2px solid #67A6D6;
     margin: 15px auto 2rem;
 }
 
@@ -114,6 +117,10 @@ p.date::before {
 p.venue::before {
     font-style: normal;
     content: "📍 ";
+}
+
+.border {
+    border: 2px solid #67A6D6;
 }
 
 footer > p {

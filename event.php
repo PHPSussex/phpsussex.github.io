@@ -15,7 +15,7 @@ if (is_null($event)) {
     $section = '<p>Our next event hasn\'t been announced yet – <a href="https://www.meetup.com/php-sussex/">join our Meetup group</a> so you don\'t miss it!</p>';
 } else {
     $section = sprintf(
-        '<a href="%s" class="event"><img alt="Poster of the event" src="%s"><div><p class="title">%s</p><p class="date">%s</p><p class="venue">%s</p></div></a>',
+        '<a href="%s" class="event border"><img alt="Poster of the event" src="%s"><div><p class="title">%s</p><p class="date">%s</p><p class="venue">%s</p></div></a>',
         $event->url(),
         $event->image(),
         $event->title(),
