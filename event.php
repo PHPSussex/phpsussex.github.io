@@ -42,9 +42,17 @@ final class Event
 
     public static function fromUrl(string $url): ?self
     {
-        $dom = (new HttpBrowser(HttpClient::create()))
-            ->request('GET', $url)
-            ->filter('div#e-1');
+        for ($i = 0; $i < 5; $i++) {
+            $dom = (new HttpBrowser(HttpClient::create()))
+                ->request('GET', $url)
+                ->filter('div#e-1');
+
+            if ($dom->count() > 0) {
+                break;
+            }
+
+            sleep(3);
+        }
 
         return $dom->count() === 0 ? null : new self($dom);
     }
